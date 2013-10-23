@@ -3,5 +3,11 @@
     "description": "Learning Chrome",
     "version": "0.1",
     "manifest_version": 2,
-    "content_scripts": ["hello_world.js"]
+    "content_scripts": [
+        {
+        "js": ["hello_world.js"],
+        "matches": ["http://*/*", "https://*/*"],
+        "run_at": "document_end"
+        }
+    ]
 }
